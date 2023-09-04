@@ -1,12 +1,4 @@
-export interface AuthenticatedUser {
-    id: string;
-    email: string;
-    password: string;
-    token: string;
-    refreshToken: string;
-}
-
-export type User = Pick<AuthenticatedUser, 'email' | 'password'>;
+import { AuthenticatedUser, User } from "../../app/schemas";
 
 export interface ForAuthenticating {
     login: (email: string, password: string) => Promise<AuthenticatedUser>;

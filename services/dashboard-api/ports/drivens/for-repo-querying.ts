@@ -1,5 +1,5 @@
 import { User as RepoUser} from "../../../repository/app/schemas";
-import { User } from "../drivers"
+import { User } from "../../app/schemas";
 
 export interface ForRepoQuerying {
     getUser(email: string): Promise<RepoUser>;
